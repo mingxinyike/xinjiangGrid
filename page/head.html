@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="../css/head.css">
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/avalon.js"></script>
+    <script src="../js/head.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&amp;ak=HL35e1E12vh3KsAYwq2ijmtV"></script>
+  </head>
+  <body>
+    <div class="header"><img src="../img/main-logo.png" height="45px" class="headmain">
+      <ul>
+        <li><a>管理员</a></li>
+        <li><a>修改密码</a></li>
+        <li><a>使用帮助</a></li>
+        <li><a>联系我们</a></li>
+        <li><span></span><a>退出登录</a></li>
+      </ul>
+    </div>
+    <div ms-controller="show" class="sider">
+      <ul>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px 0px; }" ms-click="showclick('showmap')" ms-class="choosedli:showmap" class="mainlist"><a class="down">地图</a></li>
+        <ul ms-effect="toggle" ms-visible="showmap" class="secondlist">
+          <li><a>浏览</a></li>
+          <li><a>加载图层</a></li>
+          <li><a>行政区介绍</a></li>
+          <li><a>流动人口</a></li>
+        </ul>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px -40px; }" ms-click="showclick('showgrid')" ms-class="choosedli:showgrid" class="mainlist"><a class="down">网格信息查询</a></li>
+        <ul ms-effect="toggle" ms-visible="showgrid" class="secondlist">
+          <li><a>网格信息查询</a></li>
+        </ul>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px -80px; }" ms-click="showclick('showstat')" ms-class="choosedli:showstat" class="mainlist"><a class="down">统计</a></li>
+        <ul ms-effect="toggle" ms-visible="showstat" class="secondlist">
+          <li><a>地图统计</a></li>
+          <li><a>网格长统计</a></li>
+          <li><a>流动人口统计</a></li>
+        </ul>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px -120px; }" ms-click="showclick('showuser')" ms-class="choosedli:showuser" class="mainlist"><a class="down">用户管理</a></li>
+        <ul ms-effect="toggle" ms-visible="showuser" class="secondlist">
+          <li><a>修改密码</a></li>
+          <li><a>管理权限</a></li>
+          <li><a>增加用户</a></li>
+          <li><a>删除用户</a></li>
+        </ul>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px -160px; }" ms-click="showclick('showhouse')" ms-class="choosedli:showhouse" class="mainlist"><a>房屋定位</a></li>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px -200px; }" ms-click="showclick('showpeople')" ms-class="choosedli:showpeople" class="mainlist"><a>人员管理</a></li>
+        <li style="background:url('../img/sprite3.png') no-repeat -10px -240px; }" ms-click="showclick('showset')" ms-class="choosedli:showset" class="mainlist"><a>设置</a></li>
+      </ul>
+    </div>
+    <div id="content"></div>
+    <script src="../js/map.js"></script>
+  </body>
+</html>

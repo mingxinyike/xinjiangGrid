@@ -1,0 +1,74 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(type="text/css", rel="stylesheet", href="../css/head.css")
+        script(src="../js/lib/jquery.min.js")
+        script(src="../js/lib/avalon.js")
+        script(src="../js/head.js")
+        script(src="http://api.map.baidu.com/api?v=2.0&ak=HL35e1E12vh3KsAYwq2ijmtV")
+    body
+        .header
+            img.headmain(src="../img/main-logo.png" height="45px")
+            ul
+                li
+                    a 管理员
+                li
+                    a 修改密码
+                li
+                    a 使用帮助
+                li
+                    a 联系我们
+                li
+                    span
+                    a 退出登录
+
+        .sider(ms-controller="show")
+            ul
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px 0px; }" ms-click="showclick('showmap')" ms-class="choosedli:showmap")
+                    a.down 地图
+                ul.secondlist( ms-effect="toggle" ms-visible="showmap")
+                    li
+                        a 浏览
+                    li
+                        a 加载图层
+                    li
+                        a 行政区介绍
+                    li
+                        a 流动人口
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px -40px; }" ms-click="showclick('showgrid')" ms-class="choosedli:showgrid")
+                    a.down 网格信息查询
+                ul.secondlist( ms-effect="toggle" ms-visible="showgrid")
+                    li
+                        a 网格信息查询
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px -80px; }" ms-click="showclick('showstat')" ms-class="choosedli:showstat")
+                    a.down 统计
+                ul.secondlist(ms-effect="toggle" ms-visible="showstat")
+                    li
+                        a 地图统计
+                    li
+                        a 网格长统计
+                    li
+                        a 流动人口统计
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px -120px; }" ms-click="showclick('showuser')" ms-class="choosedli:showuser")
+                    a.down 用户管理
+                ul.secondlist(ms-effect="toggle" ms-visible="showuser")
+                    li
+                        a 修改密码
+                    li
+                        a 管理权限
+                    li
+                        a 增加用户
+                    li
+                        a 删除用户
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px -160px; }" ms-click="showclick('showhouse')" ms-class="choosedli:showhouse")
+                    a 房屋定位
+
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px -200px; }" ms-click="showclick('showpeople')" ms-class="choosedli:showpeople")
+                    a 人员管理
+
+                li.mainlist(style="background:url('../img/sprite3.png') no-repeat -10px -240px; }" ms-click="showclick('showset')" ms-class="choosedli:showset")
+                    a 设置
+        #content
+
+        script(src="../js/map.js")

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+  * li {
+    text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f8fbf8;
+  position: relative;
+  min-width: 1100px;
+  overflow: hidden; }
+
+.header {
+  height: 60px;
+  position: relative;
+  background: #3BBFB4; }
+  .header img.headmain {
+    margin: 8px auto 8px 20px; }
+  .header ul {
+    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .header ul li {
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none; }
+      .header ul li:hover {
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #aeaeae; }
+      .header ul li span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../img/out.png) no-repeat 0px 4px; }
+
+.sider {
+  position: absolute;
+  width: 160px;
+  height: 100%;
+  background: #3BBFB4; }
+  .sider ul li.mainlist:first-child {
+    border-top: 1px solid #00d8d8; }
+  .sider ul li.mainlist {
+    opacity: 0.83;
+    position: relative;
+    color: white;
+    display: block;
+    width: 140px;
+    height: 40px;
+    text-align: left;
+    padding-left: 20px;
+    border-bottom: 1px solid #00d8d8;
+    border-left: 2px solid #3BBFB4;
+    cursor: pointer; }
+    .sider ul li.mainlist li + li {
+      margin-top: 20px; }
+    .sider ul li.mainlist a {
+      font-size: 0.8rem;
+      display: inline-block;
+      padding-left: 30px;
+      padding-top: 13px; }
+    .sider ul li.mainlist a.down:before {
+      border: 5px solid;
+      border-color: #fff transparent transparent;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: 5px;
+      top: 15px;
+      width: 0; }
+    .sider ul li.mainlist:hover {
+      color: white;
+      border-left: 2px solid white;
+      opacity: 1; }
+  .sider ul li.choosedli {
+    opacity: 1;
+    font-weight: bold; }
+    .sider ul li.choosedli a.down:before {
+      border: 5px solid;
+      border-color: transparent transparent #fff transparent;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: 5px;
+      top: 15px;
+      width: 0; }
+  .sider ul ul.secondlist {
+    background: #2c8d85;
+    color: #a4ebd7; }
+    .sider ul ul.secondlist li {
+      width: 160px;
+      line-height: 2rem;
+      text-align: left;
+      padding-left: 50px;
+      border-left: 2px solid #2c8d85;
+      cursor: pointer; }
+      .sider ul ul.secondlist li a {
+        font-size: 0.7rem; }
+      .sider ul ul.secondlist li:hover {
+        border-left: 2px solid white;
+        color: white; }
+    .sider ul ul.secondlist li.clicked {
+      color: white;
+      border-left: 2px solid white;
+      font-weight: bold; }
+
+#content {
+  background: blue;
+  margin-left: 160px; }
+
+/*# sourceMappingURL=head.css.map */
